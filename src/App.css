@@ -1,0 +1,437 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background:
+    radial-gradient(circle at top left, #e0e7ff 0%, transparent 35%),
+    radial-gradient(circle at bottom right, #f3e8ff 0%, transparent 35%),
+    #f8fafc;
+  color: #1f2937;
+}
+
+/* =========================
+   MAIN PAGE
+========================= */
+
+.app-container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 60px 20px 80px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+  width: 100%;
+  max-width: 920px;
+  margin: 0 auto 38px;
+  padding: 8px 0;
+  text-align: center;
+}
+
+.header h1 {
+  margin: 0;
+  padding: 5px 0;
+
+  font-size: clamp(36px, 5vw, 50px);
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: -1.5px;
+
+  background: linear-gradient(90deg,
+      #4f46e5,
+      #7c3aed,
+      #9333ea);
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header p {
+  margin: 12px 0 0;
+  margin-left: 56px;
+
+  color: #64748b;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+/* =========================
+   MAIN CARD
+========================= */
+
+.tts-card {
+  width: 100%;
+  max-width: 920px;
+  margin: 0 auto;
+
+  padding: 34px;
+
+  background: rgba(255, 255, 255, 0.96);
+
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+
+  box-shadow:
+    0 25px 60px rgba(79, 70, 229, 0.10),
+    0 5px 20px rgba(15, 23, 42, 0.05);
+}
+
+/* =========================
+   TEXT INPUT
+========================= */
+
+.input-section label,
+.selector label {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #334155;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.text-input {
+  display: block;
+
+  width: 100%;
+  min-height: 220px;
+
+  padding: 17px;
+
+  border: 2px solid #e2e8f0;
+  border-radius: 16px;
+
+  background: #f8fafc;
+  color: #1e293b;
+
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.6;
+
+  resize: vertical;
+  outline: none;
+
+  transition: all 0.25s ease;
+}
+
+.text-input::placeholder {
+  color: #94a3b8;
+}
+
+.text-input:hover {
+  border-color: #c7d2fe;
+}
+
+.text-input:focus {
+  background: white;
+  border-color: #6366f1;
+
+  box-shadow:
+    0 0 0 4px rgba(99, 102, 241, 0.10),
+    0 8px 20px rgba(99, 102, 241, 0.08);
+}
+
+/* =========================
+   COUNTER
+========================= */
+
+.counter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 8px;
+  padding: 0 3px;
+
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+/* =========================
+   SELECTORS
+========================= */
+
+.selectors {
+  display: flex;
+  gap: 20px;
+
+  margin-top: 27px;
+}
+
+.selector {
+  flex: 1;
+}
+
+.selector select {
+  width: 100%;
+
+  padding: 14px 16px;
+
+  border: 2px solid #e2e8f0;
+  border-radius: 13px;
+
+  background: white;
+  color: #334155;
+
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 500;
+
+  outline: none;
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.selector select:hover {
+  border-color: #a5b4fc;
+
+  box-shadow:
+    0 5px 15px rgba(99, 102, 241, 0.07);
+}
+
+.selector select:focus {
+  border-color: #6366f1;
+
+  box-shadow:
+    0 0 0 4px rgba(99, 102, 241, 0.09);
+}
+
+/* =========================
+   ACTION BUTTONS
+========================= */
+
+.actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 14px;
+
+  margin-top: 30px;
+}
+
+.actions button {
+  border: none;
+  border-radius: 14px;
+
+  padding: 14px 26px;
+
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+/* =========================
+   GENERATE BUTTON
+========================= */
+
+.generate-btn {
+  min-width: 220px;
+
+  color: white;
+
+  background: linear-gradient(135deg,
+      #4f46e5,
+      #6366f1,
+      #8b5cf6);
+
+  box-shadow:
+    0 8px 20px rgba(79, 70, 229, 0.28);
+}
+
+.generate-btn:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 13px 28px rgba(79, 70, 229, 0.38);
+}
+
+.generate-btn:active {
+  transform: translateY(-1px);
+}
+
+/* =========================
+   CLEAR BUTTON
+========================= */
+
+.clear-btn {
+  min-width: 105px;
+
+  color: #475569;
+
+  background: #f1f5f9;
+
+  border: 1px solid #cbd5e1 !important;
+
+  box-shadow:
+    0 5px 14px rgba(15, 23, 42, 0.08);
+}
+
+.clear-btn:hover {
+  transform: translateY(-3px);
+
+  background: #e2e8f0;
+  color: #1e293b;
+
+  box-shadow:
+    0 9px 20px rgba(15, 23, 42, 0.13);
+}
+
+.clear-btn:active {
+  transform: translateY(-1px);
+}
+
+/* =========================
+   AUDIO CARD
+========================= */
+
+.audio-card {
+  margin-top: 30px;
+
+  padding: 22px;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 17px;
+
+  background: linear-gradient(135deg,
+      #f8fafc,
+      #eef2ff);
+
+  box-shadow:
+    inset 0 1px 0 white;
+}
+
+.audio-card h3 {
+  margin: 0 0 15px;
+
+  color: #334155;
+  font-size: 17px;
+}
+
+.audio-card audio {
+  display: block;
+
+  width: 100%;
+
+  margin: 0 0 17px;
+}
+
+/* =========================
+   DOWNLOAD BUTTON
+========================= */
+
+.download-btn {
+  padding: 12px 20px;
+
+  border: none;
+  border-radius: 11px;
+
+  background: #1e293b;
+  color: white;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.download-btn:hover {
+  background: #334155;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 18px rgba(15, 23, 42, 0.18);
+}
+
+/* =========================
+   ERROR MESSAGE
+========================= */
+
+.error-message {
+  margin: 20px 0 0;
+  padding: 13px 16px;
+
+  border: 1px solid #fecaca;
+  border-radius: 11px;
+
+  background: #fef2f2;
+  color: #dc2626;
+
+  font-size: 14px;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 650px) {
+
+  .app-container {
+    padding: 40px 14px 50px;
+  }
+
+  .header {
+    margin-bottom: 28px;
+  }
+
+  .header h1 {
+    font-size: 35px;
+  }
+
+  .header p {
+    font-size: 15px;
+  }
+
+  .tts-card {
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .text-input {
+    min-height: 200px;
+  }
+
+  .selectors {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .generate-btn,
+  .clear-btn {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .audio-card {
+    padding: 18px;
+  }
+}
